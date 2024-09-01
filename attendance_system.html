@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance System</title>
+</head>
+<body>
+    <h1>Attendance System</h1>
+
+    <!-- Form to add a student -->
+    <h2>Add Student</h2>
+    <form action="add_student.php" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
+        <input type="submit" value="Add Student">
+    </form>
+
+    <!-- Form to add a class -->
+    <h2>Add Class</h2>
+    <form action="add_class.php" method="post">
+        <label for="class_name">Class Name:</label>
+        <input type="text" id="class_name" name="class_name" required>
+        <input type="submit" value="Add Class">
+    </form>
+
+    <!-- Form to mark attendance -->
+    <h2>Mark Attendance</h2>
+    <form action="mark_attendance.php" method="post">
+        <label for="student_id">Student ID:</label>
+        <input type="number" id="student_id" name="student_id" required>
+        <label for="class_id">Class ID:</label>
+        <input type="number" id="class_id" name="class_id" required>
+        <label for="attendance_date">Date:</label>
+        <input type="date" id="attendance_date" name="attendance_date" required>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        <input type="submit" value="Mark Attendance">
+    </form>
+
+    <!-- Link to view attendance records -->
+    <h2>View Attendance Records</h2>
+    <a href="view_attendance.php">View Attendance Records</a>
+</body>
+</html>
